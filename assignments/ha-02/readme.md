@@ -61,14 +61,14 @@ You can also assume that all registers are available to the instructions.  There
 
 | register  | number |
 | ------------- | ------------- |
-| `$S0` | 0 |
-| `$S1` | 1 |
-| `$S2` | 2 |
-| `$S3` | 3 |
-| `$T0` | 4 |
-| `$T1` | 5 |
-| `$T2` | 6 |
-| `$T3` | 7 |
+| `s0` | 0 |
+| `s1` | 1 |
+| `s2` | 2 |
+| `s3` | 3 |
+| `t0` | 4 |
+| `t1` | 5 |
+| `t2` | 6 |
+| `t3` | 7 |
 
 ### Input
 Your program will receive the following command line arguments:
@@ -83,13 +83,13 @@ $ ./decode-inst example.bin
 ### Output
 Your program should write each instruction to the `stdout` separated by a new line.  
 
-For example, the byte `0x4D` encodes the instruction `sub $S1, $T1`, as it has the corresponding bitstring `01001101`.  
+For example, the byte `0x4D` encodes the instruction `sub s1, t1`, as it has the corresponding bitstring `01001101`.  
 
 Using a binary file with a single instruction like the example above, your program should output the following values:
 
 ```bash
 $ ./decode-inst single.bin
-sub $S1, $T1
+sub s1, t1
 ```
 
 ## `3. IPv4 Addresses (45 pts)`
